@@ -12,3 +12,5 @@
 // }
 
 // drawBall(100, 100, 20)
+import './main.css'
+import './grid.css'
