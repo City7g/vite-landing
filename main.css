@@ -2,6 +2,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 500px));
+}
+
+img {
+  display: flex;
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
@@ -18,4 +30,101 @@
   .container {
     padding: 0 32px;
   }
+}
+
+.feature {
+  display: grid;
+  align-items: end;
+  position: relative;
+  aspect-ratio: 1 / 1;
+  /* background-image:
+    linear-gradient(
+      to top,
+      black,
+      transparent 70%
+    ),
+    url('images/cat@1x.jpeg'); */
+  /* background-image:
+    linear-gradient(
+      to top,
+      black,
+      transparent 70%
+    ),
+    image-set(
+      url('images/cat@2x.avif') type('image/avif') 2x,
+      url('images/cat@1x.avif') type('image/avif') 1x,
+      url('images/cat@2x.webp') type('image/webp') 2x,
+      url('images/cat@1x.webp') type('image/webp') 1x,
+      url('images/cat@2x.jpeg') 2x,
+      url('images/cat@1x.jpeg') 1x
+    ); */
+  background-size: cover;
+}
+
+.feature:nth-of-type(1) {
+  background-image:
+    linear-gradient(
+      to top,
+      black,
+      transparent 70%
+    ),
+    image-set(
+      url('images/cat@2x.avif') type('image/avif') 2x,
+      url('images/cat@1x.avif') type('image/avif') 1x,
+      url('images/cat@2x.webp') type('image/webp') 2x,
+      url('images/cat@1x.webp') type('image/webp') 1x,
+      url('images/cat@2x.jpeg') 2x,
+      url('images/cat@1x.jpeg') 1x
+    ),
+    -webkit-image-set(
+      url('images/cat@2x.avif') type('image/avif') 2x,
+      url('images/cat@1x.avif') type('image/avif') 1x,
+      url('images/cat@2x.webp') type('image/webp') 2x,
+      url('images/cat@1x.webp') type('image/webp') 1x,
+      url('images/cat@2x.jpeg') 2x,
+      url('images/cat@1x.jpeg') 1x
+    );
+}
+
+/* @media (min-resolution: 2dppx) {
+  .feature {
+    background-image: url('images/cat@2x.jpeg');
+  }
+} */
+
+.feature__title {
+  padding: 0.7em;
+  line-height: 0.7;
+  font-size: 50px;
+  font-weight: 400;
+}
+
+@media (max-width: 600px) {
+  .feature__title {
+    font-size: 30px;
+  }
+  
+}
+
+.feature__link {
+  color: white;
+  text-decoration: none;
+}
+
+.feature__link:focus-visible {
+  outline: none;
+}
+
+.feature__link:focus-visible::before {
+  outline: 5px solid deepskyblue;
+  outline-offset: -5px;
+}
+
+.feature__link::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
 }

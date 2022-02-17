@@ -7,12 +7,30 @@
     <title>Vite App</title>
     <link rel="stylesheet" href="grid.css">
     <link rel="stylesheet" href="main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
   </head>
-  <body class="grid">
-    <div class="container">Вэб стандарты</div>
+  <body>
+    <picture>
+      <source type="image/avif" srcset="images/cat@1x.avif 1x, images/cat@2x.avif 2x">
+      <source type="image/webp" srcset="images/cat@1x.webp 1x, images/cat@2x.webp 2x">
+      <img width="500px" height="500px" src="images/cat@1x.jpeg" srcset="images/cat@2x.jpeg 2x" alt="">
+    </picture>
+
+    <article class="feature">
+      <h2 class="feature__title">
+        <a href="#" class="feature__link">Кот понухал штанину</a>
+      </h2>
+    </article>
+    <article class="feature">
+      <h2 class="feature__title">
+        <a href="#" class="feature__link">Кот понухал штанину</a>
+      </h2>
+    </article>
+    <article class="feature">
+      <h2 class="feature__title">
+        <a href="#" class="feature__link">Кот понухал штанину</a>
+      </h2>
+    </article>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>

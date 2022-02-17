@@ -13,7 +13,7 @@
   --grid-gutter: 16px;
   --grid-columns: 4;
   --grid-column-width: calc((100% - var(--grid-gutter) * var(--grid-columns)) / var(--grid-columns));
-  --grid-color: rgb(255 0 0 / 0.2);
+  --grid-color: rgb(255 0 0 / 0.1);
   
   border: solid transparent;
   border-width: 0 calc(var(--grid-sides) - var(--grid-gutter) / 2);
@@ -33,7 +33,7 @@
 @media (min-width: 736px) {
   .grid::before {
     --grid-sides: 24px;
-    --grid-columns: 4;
+    --grid-columns: 8;
   }
 }
 
