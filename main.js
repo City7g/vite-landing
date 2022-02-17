@@ -1,9 +1,14 @@
-import { TimelineMax } from 'gsap'
+const canvas = document.querySelector('canvas')
+const ctx = canvas.getContext('2d')
+canvas.width  = 600;
+canvas.height = 600; 
 
-const tl = new TimelineMax()
+const drawBall = (x, y, radius) => {
+  ctx.beginPath()
+  ctx.arc(x, y, radius, 0, 2 * Math.PI)
+  ctx.strokeStyle = '#ff0000'
+  ctx.fill()
+  ctx.closePath()
+}
 
-tl.from('h1', {
-  y: 100,
-  opacity: 0,
-  duration: 2
-})
+drawBall(100, 100, 20)
