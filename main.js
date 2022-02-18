@@ -14,3 +14,7 @@
 // drawBall(100, 100, 20)
 import './main.css'
 import './grid.css'
+
+document.querySelector('body').addEventListener('click', () => {
+  document.querySelector('body').classList.toggle('grid')
+})
