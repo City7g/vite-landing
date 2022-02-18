@@ -115,7 +115,9 @@ img {
   outline: none;
 }
 
-.feature__link:focus-visible::before {
+.feature__link:focus-visible::before,
+.feature__link:active::before,
+.feature__link:focus::before {
   outline: 5px solid deepskyblue;
   outline-offset: -5px;
 }
